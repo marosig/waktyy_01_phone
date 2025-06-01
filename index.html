@@ -71,37 +71,39 @@
             display: flex;
             flex-direction: column;
             transition: all 0.4s ease;
+            font-size: 16px;
         }
 
         .container {
             flex: 1;
-            padding: 25px 15px;
+            padding: 15px 10px;
             overflow-y: auto;
         }
 
         .header {
             text-align: center;
-            padding: 25px 0;
+            padding: 20px 0;
             border-bottom: var(--border);
             animation: fadeIn 0.6s ease;
         }
 
         .header h1 {
-            font-size: 2.2rem;
+            font-size: 1.8rem;
             font-weight: 900;
             background: linear-gradient(45deg, var(--primary), var(--secondary));
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
             margin: 0;
+            line-height: 1.2;
         }
 
         .card {
             background: var(--bg-card);
             backdrop-filter: blur(10px);
-            border-radius: 20px;
-            padding: 25px;
-            margin-bottom: 25px;
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 20px;
             border: var(--border);
             box-shadow: var(--shadow);
             transition: transform 0.4s ease, box-shadow 0.4s ease;
@@ -116,24 +118,27 @@
             text-align: center;
             background: linear-gradient(90deg, var(--primary), var(--secondary));
             color: white;
-            border-radius: 20px;
-            padding: 30px;
-            margin-bottom: 25px;
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 20px;
             animation: fadeIn 0.6s ease;
             border: none;
         }
 
         .avatar {
-            width: 90px;
-            height: 90px;
+            width: 60px;
+            height: 60px;
+            min-width: 60px;
+            min-height: 60px;
             border-radius: 50%;
             background: rgba(255, 255, 255, 0.25);
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 2.5rem;
-            margin: 0 auto 20px;
+            font-size: 1.8rem;
+            margin: 0 auto 15px;
             transition: transform 0.4s ease, box-shadow 0.4s ease;
+            touch-action: manipulation;
         }
 
         .avatar:hover {
@@ -142,26 +147,28 @@
         }
 
         .input-group {
-            margin-bottom: 25px;
+            margin-bottom: 20px;
         }
 
         .input-group label {
             display: block;
-            margin-bottom: 10px;
+            margin-bottom: 8px;
             font-weight: 500;
             color: var(--text-secondary);
-            font-size: 0.95rem;
+            font-size: 0.9rem;
         }
 
         .input-group input, .input-group textarea {
             width: 100%;
-            padding: 14px;
+            padding: 12px;
             border: 2px solid var(--bg-secondary);
-            border-radius: 12px;
+            border-radius: 10px;
             background: var(--bg-secondary);
             color: var(--text-primary);
             font-size: 1rem;
-            transition: border-color 0.4s ease, box-shadow 0.4s ease;
+            line-height: 1.5;
+            min-height: 48px;
+            box-sizing: border-box;
         }
 
         .input-group input:focus, .input-group textarea:focus {
@@ -172,21 +179,27 @@
 
         .radio-group {
             display: flex;
-            gap: 15px;
+            gap: 12px;
             flex-wrap: wrap;
             justify-content: center;
         }
 
         .radio-btn {
-            padding: 12px 24px;
+            padding: 12px 20px;
+            min-width: 80px;
+            min-height: 48px;
             background: var(--bg-secondary);
             border: 2px solid var(--primary);
-            border-radius: 12px;
+            border-radius: 10px;
             cursor: pointer;
             color: var(--text-primary);
             transition: all 0.4s ease;
-            font-size: 1rem;
+            font-size: 0.95rem;
             font-weight: 600;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            touch-action: manipulation;
         }
 
         .radio-btn:hover, .radio-btn.active {
@@ -197,15 +210,17 @@
         }
 
         .btn {
-            padding: 15px;
+            padding: 14px;
+            min-width: 48px;
+            min-height: 48px;
             border: none;
-            border-radius: 12px;
+            border-radius: 10px;
             font-weight: 600;
             cursor: pointer;
             transition: all 0.4s ease;
             font-size: 1rem;
             text-align: center;
-            width: 100%;
+            touch-action: manipulation;
         }
 
         .btn-primary {
@@ -245,13 +260,13 @@
         .quiz-progress {
             display: flex;
             justify-content: center;
-            gap: 10px;
-            margin-bottom: 25px;
+            gap: 8px;
+            margin-bottom: 20px;
         }
 
         .progress-dot {
-            width: 12px;
-            height: 12px;
+            width: 10px;
+            height: 10px;
             border-radius: 50%;
             background: var(--text-secondary);
             transition: background 0.4s ease, transform 0.4s ease;
@@ -263,32 +278,33 @@
         }
 
         .quiz-question {
-            font-size: 1.4rem;
-            margin-bottom: 25px;
+            font-size: 1.2rem;
+            margin-bottom: 20px;
             color: var(--text-primary);
             font-weight: 700;
+            line-height: 1.4;
         }
 
         .quiz-emoji {
-            font-size: 2.2rem;
-            margin-bottom: 20px;
+            font-size: 2rem;
+            margin-bottom: 15px;
         }
 
         .timeline {
             background: var(--bg-card);
             backdrop-filter: blur(10px);
-            border-radius: 20px;
-            padding: 25px;
+            border-radius: 15px;
+            padding: 20px;
         }
 
         .timeline-item {
             display: flex;
             align-items: center;
-            padding: 15px;
-            margin: 12px 0;
+            padding: 12px;
+            margin: 10px 0;
             background: var(--bg-secondary);
-            border-radius: 15px;
-            border-left: 5px solid var(--primary);
+            border-radius: 12px;
+            border-left: 4px solid var(--primary);
             animation: fadeIn 0.6s ease;
         }
 
@@ -304,9 +320,9 @@
         .timeline-time {
             font-weight: 700;
             color: var(--primary);
-            min-width: 75px;
-            margin-right: 20px;
-            font-size: 1.1rem;
+            min-width: 60px;
+            margin-right: 15px;
+            font-size: 1rem;
         }
 
         .timeline-content {
@@ -315,63 +331,66 @@
 
         .timeline-title {
             font-weight: 600;
-            margin-bottom: 6px;
-            font-size: 1.2rem;
+            margin-bottom: 5px;
+            font-size: 1.1rem;
+            line-height: 1.3;
         }
 
         .timeline-emoji {
-            font-size: 1.5rem;
-            margin-left: 20px;
+            font-size: 1.3rem;
+            margin-left: 15px;
         }
 
         .stats-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-            gap: 25px;
-            margin-bottom: 25px;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 20px;
+            margin-bottom: 20px;
         }
 
         .stat-card {
             background: var(--bg-card);
             backdrop-filter: blur(10px);
-            padding: 25px;
-            border-radius: 15px;
+            padding: 20px;
+            border-radius: 12px;
             text-align: center;
             animation: fadeIn 0.6s ease;
             border: var(--border);
         }
 
         .stat-number {
-            font-size: 2rem;
+            font-size: 1.6rem;
             font-weight: 900;
             color: var(--primary);
+            line-height: 1.2;
         }
 
         .reminder-item {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 15px;
+            padding: 12px;
             background: var(--bg-secondary);
-            border-radius: 15px;
-            margin-bottom: 12px;
+            border-radius: 12px;
+            margin-bottom: 10px;
             animation: fadeIn 0.6s ease;
         }
 
         .notification {
             position: fixed;
-            top: 20px;
-            right: 20px;
+            top: 15px;
+            right: 15px;
             background: var(--accent);
             color: white;
-            padding: 15px 20px;
-            border-radius: 12px;
+            padding: 12px 15px;
+            border-radius: 10px;
             box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
             transform: translateX(100%);
             transition: transform 0.4s ease;
             z-index: 1001;
-            max-width: 90%;
-            font-size: 1rem;
+            max-width: 85%;
+            font-size: 0.95rem;
+            line-height: 1.4;
         }
 
         .notification.show {
@@ -381,9 +400,12 @@
         .task-checkbox {
             width: 24px;
             height: 24px;
+            min-width: 24px;
+            min-height: 24px;
             cursor: pointer;
-            margin-left: 20px;
+            margin-left: 15px;
             transition: transform 0.4s ease;
+            touch-action: manipulation;
         }
 
         .task-checkbox:hover {
@@ -399,7 +421,7 @@
             backdrop-filter: blur(10px);
             display: flex;
             justify-content: space-around;
-            padding: 15px 0;
+            padding: 12px 0;
             border-top: var(--border);
             box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.15);
         }
@@ -408,13 +430,16 @@
             background: none;
             border: none;
             color: var(--text-secondary);
-            font-size: 1.2rem;
+            font-size: 1.5rem;
             display: flex;
             flex-direction: column;
             align-items: center;
             cursor: pointer;
             transition: color 0.4s ease, transform 0.4s ease;
             padding: 8px;
+            min-width: 60px;
+            min-height: 60px;
+            touch-action: manipulation;
         }
 
         .nav-btn.active {
@@ -423,8 +448,9 @@
         }
 
         .nav-btn span {
-            font-size: 0.95rem;
-            margin-top: 6px;
+            font-size: 0.85rem;
+            margin-top: 4px;
+            line-height: 1.2;
         }
 
         .nav-btn:hover {
@@ -434,7 +460,7 @@
 
         .page {
             display: none;
-            min-height: calc(100vh - 90px);
+            min-height: calc(100vh - 84px);
             animation: fadeIn 0.6s ease;
         }
 
@@ -445,13 +471,15 @@
         .theme-card {
             background: var(--bg-card);
             backdrop-filter: blur(10px);
-            border-radius: 15px;
-            padding: 15px;
+            border-radius: 12px;
+            padding: 12px;
             text-align: center;
             cursor: pointer;
             transition: transform 0.4s ease, box-shadow 0.4s ease;
             border: var(--border);
-            width: 100px;
+            min-width: 80px;
+            min-height: 100px;
+            touch-action: manipulation;
         }
 
         .theme-card:hover, .theme-card.active {
@@ -465,9 +493,9 @@
 
         .theme-preview {
             width: 100%;
-            height: 50px;
-            border-radius: 10px;
-            margin-bottom: 10px;
+            height: 40px;
+            border-radius: 8px;
+            margin-bottom: 8px;
         }
 
         .theme-preview.dark {
@@ -487,14 +515,41 @@
         }
 
         .theme-title {
-            font-size: 0.95rem;
+            font-size: 0.9rem;
             font-weight: 600;
             color: var(--text-primary);
+            line-height: 1.2;
         }
 
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(10px); }
             to { opacity: 1; transform: translateY(0); }
+        }
+
+        @media (max-width: 360px) {
+            .header h1 { font-size: 1.5rem; }
+            .avatar { width: 50px; height: 50px; min-width: 50px; min-height: 50px; font-size: 1.5rem; }
+            .input-group input, .input-group textarea { padding: 10px; min-height: 40px; }
+            .radio-btn { padding: 10px 15px; min-width: 70px; min-height: 40px; font-size: 0.9rem; }
+            .btn { padding: 12px; min-width: 40px; min-height: 40px; font-size: 0.95rem; }
+            .quiz-question { font-size: 1.1rem; }
+            .quiz-emoji { font-size: 1.8rem; }
+            .timeline-time { min-width: 50px; font-size: 0.9rem; }
+            .timeline-title { font-size: 1rem; }
+            .timeline-emoji { font-size: 1.2rem; }
+            .stat-number { font-size: 1.4rem; }
+            .nav-btn { font-size: 1.3rem; min-width: 50px; min-height: 50px; }
+            .nav-btn span { font-size: 0.8rem; }
+            .theme-card { min-width: 70px; min-height: 90px; }
+            .theme-preview { height: 35px; }
+            .theme-title { font-size: 0.85rem; }
+        }
+
+        @media (min-width: 361px) and (max-width: 767px) {
+            .container { padding: 15px; }
+            .header h1 { font-size: 2rem; }
+            .stats-grid { grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); }
+            .card { padding: 20px; }
         }
 
         @media (min-width: 768px) {
@@ -503,7 +558,7 @@
             .btn { width: auto; padding: 15px 30px; }
             .stats-grid { grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); }
             .card { max-width: 600px; margin-left: auto; margin-right: auto; }
-            .theme-card { width: 120px; }
+            .theme-card { min-width: 120px; min-height: 120px; }
         }
     </style>
 </head>
@@ -655,7 +710,7 @@
                         </div>
                     </div>
                 </div>
-                <div style="display: flex; gap: 20px; justify-content: center;">
+                <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
                     <button class="btn btn-primary" id="quizPrev" disabled>⬅️ Back</button>
                     <button class="btn btn-primary" id="quizNext">Next ➡️</button>
                     <button class="btn btn-success" id="quizFinish" style="display: none;">🎉 Finish!</button>
@@ -721,17 +776,17 @@
             <div class="card">
                 <h2>👤 Your Profile</h2>
                 <div style="text-align: center;">
-                    <div class="avatar" style="width: 130px; height: 130px; font-size: 3.5rem;" id="profileAvatar">🎯</div>
+                    <div class="avatar" style="width: 80px; height: 80px; min-width: 80px; min-height: 80px; font-size: 2.5rem;" id="profileAvatar">🎯</div>
                     <h3 id="profileName">Student</h3>
                     <p>Level <span id="profileLevel">1</span> • <span id="profileXP">0</span> XP</p>
                 </div>
             </div>
             <div class="card">
                 <h3>🎭 Choose Avatar</h3>
-                <div style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;" role="radiogroup" aria-label="Avatar selection">
-                    <button class="avatar" style="width: 70px; height: 70px; cursor: pointer;" data-avatar="🎯" aria-label="Target avatar">🎯</button>
-                    <button class="avatar" style="width: 70px; height: 70px; cursor: pointer;" data-avatar="🚀" aria-label="Rocket avatar">🚀</button>
-                    <button class="avatar" style="width: 70px; height: 70px; cursor: pointer;" data-avatar="⚡" aria-label="Lightning avatar">⚡</button>
+                <div style="display: flex; gap: 15px; flex-wrap: wrap; justify-content: center;" role="radiogroup" aria-label="Avatar selection">
+                    <button class="avatar" style="width: 60px; height: 60px; min-width: 60px; min-height: 60px; cursor: pointer;" data-avatar="🎯" aria-label="Target avatar">🎯</button>
+                    <button class="avatar" style="width: 60px; height: 60px; min-width: 60px; min-height: 60px; cursor: pointer;" data-avatar="🚀" aria-label="Rocket avatar">🚀</button>
+                    <button class="avatar" style="width: 60px; height: 60px; min-width: 60px; min-height: 60px; cursor: pointer;" data-avatar="⚡" aria-label="Lightning avatar">⚡</button>
                 </div>
             </div>
             <div class="card">
@@ -741,13 +796,13 @@
                     <input type="text" id="profileHobbies" placeholder="Reading, Painting, Soccer" aria-label="Update hobbies">
                 </div>
                 <button class="btn btn-primary" id="saveHobbiesBtn">💾 Save Hobbies</button>
-                <div id="hobbiesList" style="margin-top: 25px;">
+                <div id="hobbiesList" style="margin-top: 20px;">
                     <p style="color: var(--text-secondary); font-style: italic;">No hobbies added yet! 🎨</p>
                 </div>
             </div>
             <div class="card">
                 <h3>🎨 Choose Theme</h3>
-                <div style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;" role="radiogroup" aria-label="Theme selection">
+                <div style="display: flex; gap: 15px; flex-wrap: wrap; justify-content: center;" role="radiogroup" aria-label="Theme selection">
                     <button class="theme-card active" data-theme="dark" aria-label="Dark theme">
                         <div class="theme-preview dark"></div>
                         <div class="theme-title">Dark Theme</div>
@@ -1267,9 +1322,9 @@
                         <div class="reminder-time">${reminder.time}</div>
                         <div>${reminder.message}${(isStudy || isExercise || isHobby) && reminder.duration ? ` (${reminder.duration} min)` : ''}</div>
                     </div>
-                    <div style="display: flex; gap: 12px;">
+                    <div style="display: flex; gap: 10px;">
                         <input type="checkbox" class="task-checkbox" data-time="${reminder.time}" data-title="${reminder.message}" ${reminder.completed ? 'checked' : ''} aria-label="Mark ${reminder.message} as completed">
-                        <button class="btn btn-primary" data-index="${index}" aria-label="Remove ${reminder.message}" style="padding: 10px 15px;">❌</button>
+                        <button class="btn btn-primary" data-index="${index}" aria-label="Remove ${reminder.message}" style="padding: 8px 12px;">❌</button>
                     </div>
                 `;
                 remindersList.appendChild(div);
@@ -1355,8 +1410,8 @@
                 ul.style.padding = '0';
                 appState.user.hobbies.forEach(hobby => {
                     const li = document.createElement('li');
-                    li.style.marginBottom = '12px';
-                    li.innerHTML = `<span style="font-size: 1.5rem; margin-right: 12px;">🎨</span> ${hobby}`;
+                    li.style.marginBottom = '10px';
+                    li.innerHTML = `<span style="font-size: 1.3rem; margin-right: 10px;">🎨</span> ${hobby}`;
                     ul.appendChild(li);
                 });
                 hobbiesList.appendChild(ul);
